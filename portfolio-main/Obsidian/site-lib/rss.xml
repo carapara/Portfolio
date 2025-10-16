@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cell Biology]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>site-lib/media/favicon.png</url><title>Cell Biology</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 14 Oct 2025 15:03:23 GMT</lastBuildDate><atom:link href="site-lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 14 Oct 2025 15:03:21 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[Cell Membrane]]></title><description><![CDATA[The plasma membrane encloses the cell, defines it's boundaries, and maintains the essential differences between the cytosol and the extracellular environment.Most biological membranes have a common general structure: Thin film of Lipids
+Protein Molecules
+These are held together by noncovalent interactions.
+Cell Membranes are dynamic, fluid structures (Fluid Mosaic Model). In which most of theirs molecules move about in the plane of the membrane.
+The Lipid bilayer is 5nm Thick..
+The lipid bilayer provides the basic fluid structure which is relatively impermeable barrier to the passage of most water-soluble molecules.
+The protein molecules spanning across the lipid membrane mediate almost all other functions of the membrane.
+Transporting molecules
+Structural linkage to cytoskeleton
+Receptors
+Almost 30% of proteins all encoded genes are Membrane Proteins.
+<img alt="Plasmamembrane.png" src="resources/plasmamembrane.png" target="_self">
+Plasmamembrane~50% of Mass of Animal Cells<br>
+<img alt="Lipid with Cholesterol.png" src="resources/lipid-with-cholesterol.png" target="_self">
+Polar Heads
+Non Polar Tails → Fatty Acids (14-24 C Atoms)
+One of the tail typically has 1 or more Cis-double bonds making it Unsaturated. Each Cis-double bond creates a small kink in the tail
+The differences in the length &amp; saturation of the fatty acids tails influence how fluid the membrane is.
+In Animal Cells the most common phospholipids are → Phosphoglycerides
+- Phosphatidylethanolamine
+- Phosphatidylserine
+- Phosphatidylcholine<br>
+<img alt="Phosphoglyceride.png" src="resources/phosphoglyceride.png" target="_self">
+Other Important Phospholipids are:-
+Sphingomyelins → They are build from Sphingosine rather than Glycerol. It has long Acyl Chain with Amino and 2 hydroxyl groups.
+→ They are found abundantly in brains.<br>
+<img alt="Major Phospholipids.png" src="resources/major-phospholipids.png" target="_self">
+The Excess lipids in cells are stored as Lipid Droplets<br>
+<img alt="Lipid Droplet.png" src="resources/lipid-droplet.png" target="_self">LipidsThe lipid bilayer provide the basic structure of the biological membranes.
+The membrane proteins perform most of the membrane specific tasks.<br>
+<img alt="Membrane Proteins.png" src="resources/membrane-proteins.png" target="_self">
+They are transmembrane protein and many proteins held in the bilayer by lipid groups or hydrophobic polypeptide regions that insert into the hydrophobic core.
+Covalently linked
+Cannot be released Non Covalently Linked
+Interfere with Protein-Protein Interactions but leaves the lipid bilayer intact
+Can be released
+They give the characteristic functional properties to different cell membranes.
+→ Myelin Membrane (Electrical Insulation of Nerve Cell)
+Less than 25% Membrane Mass is Proteins
+→ Internal Membrane of Mitochondria/Chloroplast (ATP Production)
+~75% is Protein
+Typically in the plasma membrane
+50% of the mass is from the protein. but the lipids are much smaller than protein molecules
+→ There are ~50 Lipid Molecules for each Protein<br><a data-href="Membrane Protein Association with Lipid bilayer" href="notes/cell-membrane/membrane-protein-association-with-lipid-bilayer.html" class="internal-link" target="_self" rel="noopener nofollow">Membrane Protein Association with Lipid bilayer</a>Membrane ProteinsThe individual lipid molecules can freely diffuse within lipid bilayers.
+Two types of Synthetic Preparations:-
+Liposomes (Spherical Vesicles)
+→ Energetically More Favorable
+→ 25nm to 1μm
+Planar Bilayers (Black Membranes)<br>
+<img alt="Liposomes&amp;BlackMembrane.png" src="resources/liposomes&amp;blackmembrane.png" target="_self">
+The Lipids exchange places rapidly in the monolayer (Leaflet)
+→ 10^7 times per second. (Diffusion Coefficient = 10^-8/cm^2)
+Flip-flops occur very rarely. (Exception Cholesterol).<br>
+<img alt="Lipids Movement.png" src="resources/lipids-movement.png" target="_self">Lipid BilayerThe Lipids can form domains of different compositions.
+→ Van Der Waals forces are not selective to form domains of specific groups of lipid molecules.
+But in certain lipid mixtures, the lipids can transiently create dynamic patches (Domains).
+In synthetic lipid bilayer consisting of Phosphatidylcholine, Sphingomyelin and Cholesterol. The Van der Waals forces between the long and saturated hydrocarbon chains of the Sphingomyelin molecules can be strong enough to hold the adjacent molecules together transiently.
+These domains are called Lipid Rafts.
+→ They are thicker than other regions
+→ Help Organize Membrane Proteins (Concentrate them, transport in membrane Vesicles)
+→ Convert Extracellular Signals into Intracellular Ones<br>
+<img alt="Lipid Rafts.png" src="resources/lipid-rafts.png" target="_self">Lipid RaftsThe two monolayer of the Lipid Bilayer are not the same.
+This Lipid Asymmetry is important for converting Extracellular signals into intracellular ones.<br>
+<img alt="Asymmetry Bilayer.png" src="resources/asymmetry-bilayer.png" target="_self">
+Hexagon Blue → Glycolipids
+Red Polar Head → Phosphatidylcholine
+Green Polar Head → Phosphatidylserine
+Yellow Polar Head → Phosphatidylethanolamine
+Brown Polar Head → SphingomyelinMany Cytosolic Proteins bind to specific lipid head groups found in the cytosolic monolayer.
+→ Protein Kinase C (PKC) activated in response to extra cellular signal bind to the cytosolic face of the Plasma Membrane (Phosphatidylserine concentrated region) this requires negatively charged phospholipid.<br>
+<img alt="PKC.png" src="resources/pkc.png" target="_self">In RBC
+Outer Monolayer Phosphatidylcholine
+Sphingomyelin
+Inner layer
+Phosphatidylserine
+Phosphatidylethanolamine
+The presence of Phosphatidylserine in inner layer gives it charge difference (Inner → Negative)
+In case of cell death the Phosphatidylserine rapidly moves from the cytosol side to the extracellular side acting as a signal for Macrophages.Asymmetry of Bilayer<br><img alt="Membrane Protein - Lipid Bilayer.png" src="resources/membrane-protein-lipid-bilayer.png" target="_self">1 → Single α helix
+2 → Multiple α helices
+3 → Rolled up ß sheets (ß Barrel)
+4 → Anchored to the cytosolic surface by amphiphilic α helix (Partition into cytosolic monolayer using hydrophobic face of α helix)
+5 → Attached to the bilayer using covalently attached lipid chain (Fatty acid / Prenyl group in the cytosolic monolayer)
+6 → Oligosaccharide linker to Phosphatidylinositol in the non-cytosolic monolayer (GPI- Glycosylphosphatidylinositol anchor)
+7 → Noncovalently to Cytosol side
+8 → Noncovalently to Non-Cytosol SideMembrane Protein Association with Lipid bilayerThe fluidity of the membrane depends on both its composition and its temperature as is readily demonstrated in the studies of synthetic bilayers.
+The bilayer phospholipids changes from a liquid state to a 2-D rigid crystalline (Gel) state at a characteristic freezing point, this phenomenon is known as Phase Transition.
+Short hydrocarbon chains / Double bonds help maintain the bilayer remain fluid even at lower temperatures.
+Bacteria, yeast regulate their fatty acid composition to maintain constant fluidity with respect to temperature flux.
+→ Cholesterol makes the lipid bilayer less deformable, decreasing the permeability of the membrane to small water soluble molecules. but it does not reduce the fluidity of the membrane as the cholesterol in high concentrations help prevent crystallization.<br>
+<img alt="Saturated-Unsaturated Lipids.png" src="resources/saturated-unsaturated-lipids.png" target="_self">
+Phase TransitionThey are sugar containing lipids. They are made from Sphingosine.
+They associate together through hydrogen bonds between the sugars, Van der Waals forces between long and straight hydrocarbon chain
+They are found in the non-cytosolic monolayer of the lipid bilayer.Glycolipids]]></description><link>cell-membrane.html</link><guid isPermaLink="false">NOTES/0 Maps/Cell Membrane.canvas</guid><pubDate>Wed, 18 Sep 2024 04:31:50 GMT</pubDate><enclosure url="resources/plasmamembrane.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;resources/plasmamembrane.png&quot;&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>
