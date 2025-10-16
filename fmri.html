@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="An overview of Functional Magnetic Resonance Imaging (fMRI)." />
+    <meta name="author" content="Aiswarya Ramachandran" />
+    <title>fMRI Project - Aiswarya Ramachandran</title>
+    <link id="favicon" rel="icon" type="image/x-icon" href="assets/WP.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Aiswarya Ramachandran</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="nav-link" id="theme-toggle" href="#" role="button"><i class="bi bi-moon-fill"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="py-5">
+            <div class="container px-5 mb-5">
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">fMRI: Functional Magnetic Resonance Imaging</span></h1>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-10 col-xl-9 col-xxl-8">
+                        <div class="mb-5">
+                            <h2 class="text-gradient fw-bolder mb-3">Introduction</h2>
+                            <p>Functional Magnetic Resonance Imaging (fMRI) is a sophisticated, non-invasive imaging technique that maps brain activity by detecting small fluctuations in blood oxygen levels. Unlike traditional MRI, which captures structural details, fMRI visualizes real-time brain function, revealing how different regions activate during sensory, cognitive, and motor tasks.</p>
+                            <p>This is achieved through the Blood-Oxygenation-Level-Dependent (BOLD) signal — a physiological marker that reflects changes in oxygenated and deoxygenated hemoglobin linked to neural activity [3],[6]. fMRI is considered an advanced modality due to its high spatial resolution (~1–3 mm), whole-brain coverage, and ability to integrate structural and functional data simultaneously. It bridges neuroscience and clinical diagnostics, allowing visualization of the brain “in action”.</p>
+                        </div>
+                        <div class="mb-5">
+                            <h2 class="text-gradient fw-bolder mb-3">History & Evolution</h2>
+                            <p>The concept of fMRI emerged in the early 1990s when Ogawa et al. demonstrated that MRI could detect blood oxygenation changes corresponding to neuronal activity [6]. The development of the BOLD contrast mechanism established a foundation for modern functional neuroimaging [6]. By the mid-1990s, Echo Planar Imaging (EPI) enabled rapid, whole-brain acquisition in seconds, greatly enhancing temporal resolution [3], [5]. Through the 2000s, improvements in field strength (3T), signal-to-noise ratio, and preprocessing algorithms made fMRI a standard tool for brain mapping [2], [5]. In recent years, fMRI has evolved beyond basic activation mapping to include resting-state connectivity, machine learning decoding, and clinical translation in neurosurgery and psychiatry [4], [8].</p>
+                        </div>
+                        <div class="mb-5">
+                            <h2 class="text-gradient fw-bolder mb-3">Image Gallery</h2>
+                            <p class="text-muted"><em>[This is a placeholder for your image gallery. You can add your `<img>` tags here.]</em></p>
+                        </div>
+                        <div class="mb-5">
+                             <h2 class="text-gradient fw-bolder mb-3">Basic MRI vs. fMRI</h2>
+                             <h3 class="fw-bolder mb-2 mt-4">Basic MRI: Magnetic Spin of Hydrogen Protons</h3>
+                             <p>In MRI (Magnetic Resonance Imaging), we’re primarily dealing with hydrogen nuclei (protons). Since our bodies are mostly water ($H_2O$), hydrogen is abundant.</p>
+                             <ul>
+                                 <li><b>Magnetic Properties:</b> Protons have a magnetic moment due to their spin. When placed in an MRI's strong external magnetic field, they align either parallel (low energy) or antiparallel (high energy) to the field.</li>
+                                 <li><b>Excitation:</b> A radiofrequency (RF) pulse is applied, causing the protons to flip to a high-energy state.</li>
+                                 <li><b>Signal Detection:</b> When the RF pulse is turned off, the protons "relax" back to their original alignment, releasing energy as RF signals, which are detected to create detailed images of internal structures.</li>
+                             </ul>
+
+                             <h3 class="fw-bolder mb-2 mt-4">Differentiating fMRI from Regular MRI</h3>
+                             <p>fMRI measures brain function by detecting changes in blood oxygenation. This relies on the magnetic properties of two types of hemoglobin:</p>
+                             <ul>
+                                 <li><b>Neural Activity & Blood Flow:</b> Active neurons require more oxygen, leading to increased local blood flow. This brings in more oxygenated hemoglobin (diamagnetic, doesn't affect the magnetic field) and pushes out deoxygenated hemoglobin (paramagnetic, distorts the local magnetic field).</li>
+                                 <li><b>The BOLD Effect:</b> The presence of deoxygenated hemoglobin creates small disturbances in the magnetic field. A decrease in deoxygenated hemoglobin (due to increased blood flow) reduces these disturbances. This change in the MRI signal is called the BOLD (Blood Oxygen Level Dependent) signal, an indirect measure of neural activity.</li>
+                                 <li><b>From $T_2^*$ Signal to Color Maps 🔴🟡🟢:</b> Software compares the actual signal changes over time to an expected model of brain activity. Statistical tests determine the significance of the activation in each brain voxel. Warm colors (red, yellow) typically show increased activity, cool colors (blue) show decreased activity, and no color indicates no significant change.</li>
+                             </ul>
+                        </div>
+                        <div class="mb-5">
+                            <h2 class="text-gradient fw-bolder mb-3">Instrumentation & Key Components</h2>
+                            <ul>
+                                <li><b>Main Magnet (1.5T–7T):</b> Determines sensitivity and resolution; higher fields (≥3T) enhance BOLD contrast [5], [6].</li>
+                                <li><b>Gradient System:</b> Provides spatial encoding and allows rapid imaging [3].</li>
+                                <li><b>RF Coils:</b> Multi-channel coils improve signal-to-noise ratio [3].</li>
+                                <li><b>Pulse Sequence (EPI):</b> Balances temporal and spatial resolution [5].</li>
+                                <li><b>Stimulus Presentation System:</b> Administers sensory inputs (visual, auditory) to the subject.</li>
+                                <li><b>Synchronization Device:</b> Synchronizes tasks with data collection [4].</li>
+                                <li><b>Physiological Monitoring:</b> Tracks respiration and cardiac signals to correct for noise [3], [5].</li>
+                                <li><b>Processing Software:</b> Packages like SPM, FSL, and AFNI for preprocessing and statistical mapping [3], [4].</li>
+                            </ul>
+                        </div>
+                        <div class="mb-5">
+                            <h2 class="text-gradient fw-bolder mb-3">Advantages</h2>
+                            <p>fMRI offers several advantages over earlier techniques like PET or SPECT:</p>
+                            <ul>
+                                <li>It is non-invasive and does not require radioactive tracers [1], [3].</li>
+                                <li>It provides whole-brain coverage with millimeter-scale resolution.</li>
+                                <li>It can detect both task-based activation and resting-state connectivity in a single session [2], [4].</li>
+                                <li>It allows repeated measures over time for longitudinal studies.</li>
+                                <li>It integrates easily with EEG or diffusion MRI for multimodal analysis.</li>
+                            </ul>
+                        </div>
+                        <div class="mb-5">
+                            <h2 class="text-gradient fw-bolder mb-3">Applications</h2>
+                            <h3 class="fw-bolder mb-2 mt-4">Clinical Applications</h3>
+                            <ul>
+                                <li><b>Neurosurgical Planning:</b> Identifies critical motor, sensory, and language areas before tumor or epilepsy surgery [7], [8].</li>
+                                <li><b>Epilepsy Evaluation:</b> Used to localize seizure foci [10].</li>
+                                <li><b>Stroke & Neurorehabilitation:</b> Helps map recovery and compensatory brain activation [8].</li>
+                                <li><b>Concussion Assessment:</b> Reveals altered activation and connectivity in mild traumatic brain injury [9].</li>
+                            </ul>
+                            <h3 class="fw-bolder mb-2 mt-4">Research Applications</h3>
+                            <ul>
+                                <li><b>Cognitive Neuroscience:</b> Investigating memory, emotion, attention, and decision-making.</li>
+                                <li><b>Psychiatric Research:</b> Exploring abnormal connectivity in disorders such as depression and schizophrenia.</li>
+                                <li><b>Organizational Neuroscience:</b> Studying neural mechanisms behind decision-making and stress [4].</li>
+                            </ul>
+                        </div>
+                        <div class="mb-5">
+                             <h2 class="text-gradient fw-bolder mb-3">Future Scope & Limitations</h2>
+                             <h3 class="fw-bolder mb-2 mt-4">Future Scope</h3>
+                             <ul>
+                                 <li><b>Ultra-high-field MRI (7T):</b> Improves resolution and sensitivity to cortical layers [4], [5].</li>
+                                 <li><b>Faster Acquisition:</b> Multiband EPI allows sub-second temporal resolution [3].</li>
+                                 <li><b>Machine Learning and AI:</b> Enhance pattern recognition for disease classification.</li>
+                                 <li><b>Real-Time fMRI (rt-fMRI):</b> Enables neurofeedback for therapeutic interventions [4], [8].</li>
+                             </ul>
+                             <h3 class="fw-bolder mb-2 mt-4">Limitations</h3>
+                             <ul>
+                                 <li>The BOLD signal is an indirect measure of neuronal activity, dependent on hemodynamics [6].</li>
+                                 <li>Motion artifacts remain a challenge, especially in certain patient populations [3].</li>
+                                 <li>Poor temporal resolution compared to neural events that occur on a millisecond scale (like EEG).</li>
+                                 <li>High cost of equipment, scanning, and data analysis.</li>
+                             </ul>
+                         </div>
+                        <div class="mb-5">
+                            <h2 class="text-gradient fw-bolder mb-3">Case Studies</h2>
+                            <div class="card shadow border-0 rounded-4 mb-4">
+                                <div class="card-body p-4">
+                                    <h5 class="fw-bolder">Visual Memory in Epilepsy (Pre/Post Surgery)</h5>
+                                    <p>A 48-year-old woman with epilepsy underwent fMRI before and after right temporal lobe resection. Before surgery, the right hippocampus showed strong activation during a visual memory task. After surgery, this activation was gone, but other cortical regions showed increased activity, demonstrating the brain's neuroplasticity. Her memory performance remained stable despite the tissue loss [10].</p>
+                                </div>
+                            </div>
+                             <div class="card shadow border-0 rounded-4 mb-4">
+                                <div class="card-body p-4">
+                                    <h5 class="fw-bolder">Pre-Surgical Brain Tumor Mapping</h5>
+                                    <p>A 53-year-old woman with a brain tumor near motor regions underwent fMRI to map hand and leg movement areas. During finger and toe tapping tasks, activation maps clearly showed the motor regions adjacent to the tumor. This allowed surgeons to plan a safer procedure that preserved motor function [11].</p>
+                                </div>
+                            </div>
+                             <div class="card shadow border-0 rounded-4 mb-4">
+                                <div class="card-body p-4">
+                                    <h5 class="fw-bolder">Brain Activation After Sport Concussion</h5>
+                                    <p>Two concussed varsity athletes were studied. One athlete showed widespread brain activation during cognitive tasks, suggesting the brain was recruiting extra regions to compensate for the injury. The other showed reduced activation and slower reaction times, even though his symptoms had cleared. This highlights fMRI's potential to provide a more sensitive measure of brain recovery than symptom checklists alone [9].</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="text-gradient fw-bolder mb-3">References (IEEE Format)</h2>
+                            <p class="small">[1] “Functional Magnetic Resonance Imaging (fMRI) of the Brain,” RadiologyInfo.org, 2025. [Online]. Available: https://www.radiologyinfo.org/en/info/fmribrain</p>
+                            <p class="small">[2] H. M. Chow, Y. M. Kaup, M. Raichle, and C. Y. Wong, “Applications and limitations of functional magnetic resonance imaging,” Frontiers in Neuroscience, vol. 11, p. 524, 2017.</p>
+                            <p class="small">[3] G. H. Glover, “Overview of functional magnetic resonance imaging,” Neurosurgery Clinics of North America, vol. 22, no. 2, pp. 133–139, 2011.</p>
+                            <p class="small">[4] L. Loued-Khenissi, O. Döll, and K. Preuschoff, “An Overview of Functional Magnetic Resonance Imaging Techniques for Organizational Research,” Expert Review of Neurotherapeutics, vol. 24, no. 3, pp. 1–13, 2024</p>
+                            <p class="small">[5] N. F. Ramsey, “Functional MRI: A short introduction to methods, results, and applications,” European Psychiatry, vol. 17, no. 6, pp. 341–348, 2002.</p>
+                            <p class="small">[6] J. C. Gore, “Principles and practice of functional MRI of the human brain,” Journal of Clinical Investigation, vol. 112, no. 1, pp. 4–9, 2003.</p>
+                            <p class="small">[7] Society for Brain Mapping and Therapeutics, “Clinical Applications of fMRI,” World Brain Mapping Organization, 2025</p>
+                            <p class="small">[8] D. Orringer, D. R. Vago, and A. J. Golby, “Clinical applications and future directions of functional MRI,” Current Opinion in Neurology, vol. 25, no. 4, pp. 1–7, 2013.</p>
+                            <p class="small">[9] M. Hutchison, R. Comper, and C. Mainwaring, “fMRI and brain activation after sport concussion: A tale of two cases,” Frontiers in Neurology, vol. 5, p. 88, 2014.</p>
+                            <p class="small">[10] L. Korsnes, T. Cavanna, and E. Hugdahl, “An fMRI case study of visual memory in a patient with epilepsy: Comparison before and after temporal lobe surgery,” Epilepsy & Behavior, vol. 15, no. 3, pp. 345–350, 2009.</p>
+                            <p class="small">[11] M. Cichocka, “Functional Magnetic Resonance Imaging of a Brain – Example Results of Examination,” Jagiellonian University Medical College, Kraków, Poland, 2011.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0">Copyright &copy; Aiswarya Ramachandran 2025</div></div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
