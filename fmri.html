@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="A comprehensive overview of Functional Magnetic Resonance Imaging (fMRI)." />
+    <meta name="author" content="Aiswarya Ramachandran" />
+    <title>fMRI Project - Comprehensive Guide</title>
+    <link id="favicon" rel="icon" type="image/x-icon" href="assets/AR.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .img-fluid { max-width: 100%; height: auto; border-radius: 0.5rem; }
+        section p, section li { text-align: justify; }
+        .reveal-on-scroll { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease-out, transform 0.6s ease-out; }
+        .reveal-on-scroll.visible { opacity: 1; transform: translateY(0); }
+        figcaption { text-align: center; font-style: italic; font-size: 0.9rem; color: #6c757d; margin-top: 0.5rem; }
+        .page-header { padding: 5rem 0; background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/Image gallery 1.jpg'); background-size: cover; background-position: center; color: white; }
+        .accordion-button:not(.collapsed) { color: #0d6efd; background-color: #e7f1ff; }
+        #backToTopBtn { display: none; position: fixed; bottom: 20px; right: 30px; z-index: 1056; border: none; background-color: #0d6efd; color: white; cursor: pointer; padding: 10px 15px; border-radius: 50%; font-size: 18px; transition: opacity 0.3s, transform 0.3s; }
+        #backToTopBtn:hover { background-color: #0a58ca; transform: scale(1.1); }
+        .carousel-item { transition: transform 0.6s ease-in-out; }
+        .carousel-image { height: 450px; width: 100%; object-fit: contain; }
+        .carousel-inner { background-color: #000; }
+        .carousel-caption { background-color: rgba(0, 0, 0, 0.5); border-radius: 0.5rem; }
+        
+        /* --- CITATION STYLES --- */
+        .citation a { font-weight: 500; }
+        .reference-list li { margin-bottom: 0.5rem; }
+        .reference-list .back-link { margin-right: 0.5rem; }
+
+        /* --- CORRECTED DARK MODE STYLES --- */
+        .dark-mode .bg-white { background-color: #212529 !important; }
+        .dark-mode .card { background-color: #212529; }
+        .dark-mode .accordion-item { background-color: #212529; border-color: #4d545e; }
+        .dark-mode .accordion-body { color: #adb5bd; }
+        .dark-mode .accordion-button { background-color: #343a40; color: #f8f9fa; }
+        .dark-mode .accordion-button:not(.collapsed) { background-color: #0d6efd; color: white; }
+        .dark-mode .accordion-button::after { filter: invert(1) grayscale(100%); }
+        .dark-mode .accordion-button:not(.collapsed)::after { filter: none; }
+        .dark-mode figcaption { color: rgba(255, 255, 255, 0.5); }
+        .dark-mode .modal-content { background-color: #212529; }
+        .dark-mode .modal-header { border-bottom-color: #4d545e; }
+        .dark-mode .btn-close { filter: invert(1) grayscale(100%); }
+
+        /* clickable image + modal image sizing */
+        .img-clickable { cursor: pointer; }
+        .modal-img { width: 100%; height: auto; display: block; margin: 0 auto; max-height: calc(100vh - 160px); object-fit: contain; }
+    </style>
+</head>
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 sticky-top shadow-sm">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Aiswarya Ramachandran</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item ms-lg-3"><a class="nav-link" id="theme-toggle" href="#" role="button"><i class="bi bi-moon-fill"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="page-header text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bolder">fMRI: A Deep Dive</h1>
+                <p class="lead">Exploring the technology behind mapping the human brain in action.</p>
+            </div>
+        </header>
+
+        <section class="py-5">
+            <div class="container px-5 my-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-10">
+
+                        <div class="text-center mb-5 reveal-on-scroll">
+                            <img src="assets/fmri image.jpg" class="img-fluid rounded-3 shadow-lg" alt="Patient undergoing an fMRI scan in a modern scanner">
+                        </div>
+                        
+                        <div class="row gx-5 align-items-center mb-5 reveal-on-scroll">
+                            <div class="col-lg-6">
+                                <h2 class="text-gradient fw-bolder mb-3">Introduction</h2>
+                                <p>Functional Magnetic Resonance Imaging (fMRI) is a sophisticated, non-invasive imaging technique that maps brain activity by detecting small fluctuations in blood oxygen levels. Unlike traditional MRI, which captures structural details, fMRI visualizes real-time brain function, revealing how different regions activate during sensory, cognitive, and motor tasks. This is achieved through the Blood-Oxygenation-Level-Dependent (BOLD) signal — a physiological marker that reflects changes in oxygenated and deoxygenated hemoglobin linked to neural activity.<sup class="citation" id="cite_ref-1"><a href="#ref-1">[3]</a>, <a href="#ref-2">[6]</a></sup> fMRI is considered an advanced modality due to its high spatial resolution (~1–3 mm), whole-brain coverage, and ability to integrate structural and functional data simultaneously. It bridges neuroscience and clinical diagnostics, allowing visualization of the brain “in action”.</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <video class="img-fluid rounded-3 shadow-lg" autoplay loop muted playsinline><source src="assets/Generating_fMRI_Animation_Video.mp4" type="video/mp4"></video>
+                            </div>
+                        </div>
+
+                        <div class="card shadow border-0 rounded-4 mb-5 reveal-on-scroll">
+                            <div class="card-body p-4">
+                               <h2 class="text-gradient fw-bolder mb-3">History & Evolution</h2>
+                               <p>The concept of fMRI emerged in the early 1990s when Ogawa et al. demonstrated that MRI could detect blood oxygenation changes corresponding to neuronal activity.<sup class="citation" id="cite_ref-3"><a href="#ref-6">[6]</a></sup> The development of the BOLD contrast mechanism established a foundation for modern functional neuroimaging.<sup class="citation" id="cite_ref-4"><a href="#ref-6">[6]</a></sup> By the mid-1990s, Echo Planar Imaging (EPI) enabled rapid, whole-brain acquisition in seconds, greatly enhancing temporal resolution.<sup class="citation" id="cite_ref-5"><a href="#ref-3">[3]</a>, <a href="#ref-5">[5]</a></sup> Through the 2000s, improvements in field strength (3T), signal-to-noise ratio, and preprocessing algorithms made fMRI a standard tool for brain mapping.<sup class="citation" id="cite_ref-6"><a href="#ref-2">[2]</a>, <a href="#ref-5">[5]</a></sup> In recent years, fMRI has evolved beyond basic activation mapping to include resting-state connectivity, machine learning decoding, and clinical translation in neurosurgery and psychiatry.<sup class="citation" id="cite_ref-7"><a href="#ref-4">[4]</a>, <a href="#ref-8">[8]</a></sup></p>
+                            </div>
+                        </div>
+
+                        <div class="card shadow border-0 rounded-4 mb-5 reveal-on-scroll">
+                            <div class="card-body p-4">
+                                <h2 class="text-gradient fw-bolder mb-3 text-center">fMRI in Action: Image Gallery</h2>
+                                <div id="imageGallery" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner rounded-4">
+                                        <div class="carousel-item active"><img src="assets/Image gallery 1.jpg" class="d-block w-100 carousel-image" alt="Brain Activation Map"><div class="carousel-caption d-none d-md-block"><h5>Brain Activation Map</h5><p>Red and blue areas show regions of increased and decreased neural activity.</p></div></div>
+                                        <div class="carousel-item"><img src="assets/Image gallery 2.jpg" class="d-block w-100 carousel-image" alt="Multi-Slice Functional Imaging"><div class="carousel-caption d-none d-md-block"><h5>Multi-Slice Functional Imaging</h5><p>Multiple axial slices of the brain showing functional activity across different levels.</p></div></div>
+                                        <div class="carousel-item"><img src="assets/Image gallery 3.jpg" class="d-block w-100 carousel-image" alt="Temporal Dynamics of Brain Activity"><div class="carousel-caption d-none d-md-block"><h5>Temporal Dynamics of Brain Activity</h5><p>A time-series showing how brain activation evolves in response to a task.</p></div></div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#imageGallery" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#imageGallery" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card shadow border-0 rounded-4 mb-5 reveal-on-scroll">
+                            <div class="card-body p-4">
+                                <h2 class="text-gradient fw-bolder mb-3">Basic MRI: Magnetic Spin of Hydrogen Protons</h2>
+                                <p>In Magnetic Resonance Imaging (MRI), we’re primarily dealing with hydrogen nuclei (protons). Because our bodies are mostly water (H₂O), hydrogen is abundant. The basic mechanism involves these key steps:</p>
+                                <h5 class="fw-bolder mt-4">a. Magnetic Properties of Hydrogen Protons:</h5>
+                                <ul><li>Protons have a magnetic moment due to their spin. When placed in a strong external magnetic field, such as in an MRI machine, they act like tiny magnets and align either parallel (low energy) or antiparallel (high energy) to the field.</li></ul>
+                                <h5 class="fw-bolder mt-4">b. Excitation with Radiofrequency (RF) Pulse:</h5>
+                                <ul><li>An RF pulse is applied at a specific frequency (the Larmor frequency). This pulse causes the protons to absorb energy and flip from their low-energy state to a high-energy state.</li><li>When the RF pulse is turned off, the protons "relax" back to their original alignment, releasing the absorbed energy as RF signals.</li></ul>
+                                <h5 class="fw-bolder mt-4">c. Signal Detection:</h5>
+                                <ul><li>These released signals are detected by the MRI machine's receiver coils. The signals' frequency, phase, and amplitude depend on the local magnetic environment, which allows a computer to construct detailed images of internal structures.</li></ul>
+                            </div>
+                        </div>
+
+                        <div class="card shadow border-0 rounded-4 mb-5 reveal-on-scroll">
+                            <div class="card-body p-4">
+                                <h2 class="text-gradient fw-bolder mb-3">Differentiating fMRI from Regular MRI</h2>
+                                <p>In fMRI, we still use the magnetic properties of hydrogen protons, but the key difference lies in how brain activity influences the MRI signal.</p>
+                                <h5 class="fw-bolder mt-4">How fMRI Works:</h5>
+                                <p><b>a. Blood Oxygenation and Magnetic Properties:</b></p>
+                                <ul>
+                                    <li>fMRI measures brain function by detecting changes in blood oxygenation in the brain. This is where the two types of hemoglobin (oxygenated and deoxygenated) come into play.</li>
+                                    <li>When neurons in the brain become active, they require more oxygen to fuel their activity. This causes local blood flow to increase in that region.</li>
+                                    <li>The increase in blood flow brings more oxygenated hemoglobin (which is diamagnetic and does not affect the magnetic field significantly) and less deoxygenated hemoglobin (which is paramagnetic and alters the local magnetic field).</li>
+                                </ul>
+                                <p><b>b. Magnetic Susceptibility and the BOLD Effect:</b></p>
+                                <ul>
+                                    <li>The presence of deoxygenated hemoglobin makes the blood paramagnetic, meaning it interacts with the magnetic field, creating small inhomogeneities (disturbances) in the magnetic field.</li>
+                                    <li>In fMRI, we detect these changes in the magnetic field using a technique called T2*-weighted imaging. When the concentration of deoxygenated hemoglobin decreases (due to increased oxygenated blood flow), these inhomogeneities decrease, leading to a change in the MRI signal.</li>
+                                    <li>This signal change is referred to as the BOLD (Blood Oxygen Level Dependent) signal, which is an indirect measure of neural activity.</li>
+                                </ul>
+                                <p><b>c. T2* Relaxation and Signal Detection:</b></p>
+                                <ul>
+                                    <li>Deoxygenated hemoglobin is paramagnetic, meaning it distorts the local magnetic field and causes nearby proton spins to dephase more quickly, leading to a lower T2* signal in MRI. Therefore, a higher concentration of deoxygenated hemoglobin results in more magnetic disruption and a weaker signal.</li>
+                                    <li>After neural activation, the drop in deoxygenated hemoglobin reduces this magnetic disturbance, allowing proton spins to remain in phase longer, which strengthens the T2* signal. fMRI detects these signal changes, using them to infer which areas of the brain are more active.</li>
+                                </ul>
+                                <p><b>d. From T2* Signal to Color Maps:</b></p>
+                                <p>After scanning, fMRI data is analyzed using software (like SPM, FSL, AFNI) that models expected brain activity, compares it to the actual signal changes in each voxel, runs statistical tests, and assigns a color based on the strength of the activation.</p>
+                                <p><b>e. Common Color Codes:</b></p>
+                                <ul class="list-unstyled">
+                                    <li>Warm colors (🔴red,🟠orange,🟡yellow) → Increased activity (positive BOLD signal)</li>
+                                    <li>Cool colors (🔵blue,🟣purple) → Decreased activity (negative BOLD signal)</li>
+                                    <li>No color → No significant change</li>
+                                </ul>
+                                <p>The actual raw signal isn't shown — we see a statistical map overlaid on a structural image (like a T1-weighted MRI).</p>
+                            </div>
+                        </div>
+
+                        <div class="row gx-5 align-items-center mb-5 reveal-on-scroll">
+                            <div class="col-lg-6 order-lg-2">
+                                <h2 class="text-gradient fw-bolder mb-3">The BOLD Effect</h2>
+                                <p>The core principle of fMRI is the Blood-Oxygen-Level-Dependent (BOLD) signal. When neurons become active, they consume oxygen, causing an increase in local blood flow. This hemodynamic response brings more oxygenated hemoglobin than is consumed. Since deoxygenated hemoglobin is paramagnetic and disrupts the magnetic field, its relative reduction leads to a stronger, cleaner T2*-weighted MRI signal. This signal change is an indirect but reliable marker of neural activity.</p>
+                            </div>
+                            <div class="col-lg-6 order-lg-1">
+                                <figure><img src="assets/BOLD effect.jpg" class="img-fluid rounded-3 shadow-lg" alt="Diagram of BOLD effect"><figcaption>The BOLD (Blood-Oxygen-Level-Dependent) Effect.</figcaption></figure>
+                            </div>
+                        </div>
+
+                        <div class="card shadow border-0 rounded-4 mb-5 reveal-on-scroll">
+                             <div class="card-body p-4">
+                                <h2 class="text-gradient fw-bolder mb-3">Instrumentation</h2>
+                                <div class="row align-items-center">
+                                    <div class="col-lg-7">
+                                        <p>The fMRI system is built around several essential components:</p>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-3"><i class="bi bi-magnet-fill text-primary me-2"></i><b>Main Magnet (1.5T–7T):</b> Determines sensitivity and resolution; higher fields enhance BOLD contrast.<sup class="citation" id="cite_ref-8"><a href="#ref-5">[5]</a>, <a href="#ref-6">[6]</a></sup></li>
+                                            <li class="mb-3"><i class="bi bi-grid-3x3-gap-fill text-primary me-2"></i><b>Gradient System:</b> Provides spatial encoding and allows rapid imaging through strong, fast-switching gradients.<sup class="citation" id="cite_ref-9"><a href="#ref-3">[3]</a></sup></li>
+                                            <li class="mb-3"><i class="bi bi-broadcast text-primary me-2"></i><b>RF Coils:</b> Transmit and receive signals, improving signal-to-noise ratio.<sup class="citation" id="cite_ref-10"><a href="#ref-3">[3]</a></sup></li>
+                                            <li class="mb-3"><i class="bi bi-cpu-fill text-primary me-2"></i><b>Pulse Sequence (EPI):</b> Balances temporal and spatial resolution; parameters like TR, TE, and voxel size influence image quality.<sup class="citation" id="cite_ref-11"><a href="#ref-5">[5]</a></sup></li>
+                                            <li class="mb-3"><i class="bi bi-display-fill text-primary me-2"></i><b>Stimulus Presentation System:</b> Administers MR-compatible sensory inputs to the subject during the scan.</li>
+                                            <li class="mb-3"><i class="bi bi-stopwatch-fill text-primary me-2"></i><b>Synchronization Device:</b> Synchronizes tasks with data collection.<sup class="citation" id="cite_ref-12"><a href="#ref-4">[4]</a></sup></li>
+                                            <li class="mb-3"><i class="bi bi-heart-pulse-fill text-primary me-2"></i><b>Physiological Monitoring:</b> Tracks respiration and cardiac signals to correct for physiological noise.<sup class="citation" id="cite_ref-13"><a href="#ref-3">[3]</a>, <a href="#ref-5">[5]</a></sup></li>
+                                            <li class="mb-3"><i class="bi bi-pc-display-horizontal text-primary me-2"></i><b>Processing Software:</b> Packages like SPM, FSL, and AFNI are used for preprocessing and statistical mapping.<sup class="citation" id="cite_ref-14"><a href="#ref-3">[3]</a>, <a href="#ref-4">[4]</a></sup></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-5">
+                                       <figure>
+                                           <a href="#" data-bs-toggle="modal" data-bs-target="#componentsModal">
+                                                <img src="assets/Components.png" class="img-fluid rounded-3 clickable-image" alt="Diagram of fMRI components">
+                                           </a>
+                                           <figcaption>Key Components of an fMRI System. (Click to expand)</figcaption>
+                                       </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-5 reveal-on-scroll">
+                            <h2 class="text-gradient fw-bolder mb-4 text-center">Key Aspects of fMRI</h2>
+                            <div class="accordion shadow-sm" id="detailsAccordion">
+                                <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvantages">Advantages</button></h2><div id="collapseAdvantages" class="accordion-collapse collapse show" data-bs-parent="#detailsAccordion"><div class="accordion-body"><ul><li>It is non-invasive and does not require radioactive tracers.<sup class="citation" id="cite_ref-13"><a href="#ref-1">[1]</a>, <a href="#ref-3">[3]</a></sup></li><li>It provides whole-brain coverage with millimeter-scale resolution.</li><li>It can detect both task-based activation and resting-state connectivity in a single session.<sup class="citation" id="cite_ref-14"><a href="#ref-2">[2]</a>, <a href="#ref-4">[4]</a></sup></li><li>It allows repeated measures for longitudinal studies and integrates easily with other modalities like EEG.<sup class="citation" id="cite_ref-15"><a href="#ref-2">[2]</a>, <a href="#ref-4">[4]</a></sup></li></ul></div></div></div>
+                                <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseApps">Applications</button></h2><div id="collapseApps" class="accordion-collapse collapse" data-bs-parent="#detailsAccordion"><div class="accordion-body"><b>Clinical Applications:</b><ul><li><b>Neurosurgical Planning:</b> fMRI identifies critical motor, sensory, and language areas before tumor or epilepsy surgery, helping avoid damage to eloquent cortex.<sup class="citation" id="cite_ref-16"><a href="#ref-7">[7]</a>, <a href="#ref-8">[8]</a></sup></li><li><b>Epilepsy Evaluation:</b> Used to localize seizure foci and assess postoperative functional reorganization.<sup class="citation" id="cite_ref-17"><a href="#ref-10">[10]</a></sup></li><li><b>Stroke & Neurorehabilitation:</b> Helps map recovery and compensatory brain activation following stroke.<sup class="citation" id="cite_ref-18"><a href="#ref-8">[8]</a></sup></li><li><b>Brain Tumor Assessment:</b> Determines how close lesions are to functionally active regions.<sup class="citation" id="cite_ref-19"><a href="#ref-8">[8]</a></sup></li><li><b>Concussion Assessment:</b> Reveals altered activation and connectivity in mild traumatic brain injury.<sup class="citation" id="cite_ref-20"><a href="#ref-9">[9]</a></sup></li></ul><br><b>Research Applications:</b><ul><li><b>Cognitive Neuroscience:</b> Investigating memory, emotion, attention, and decision-making.</li><li><b>Psychiatric Research:</b> Exploring abnormal connectivity in disorders such as depression and schizophrenia.</li><li><b>Organizational Neuroscience:</b> Studying neural mechanisms behind decision-making and stress.<sup class="citation" id="cite_ref-21"><a href="#ref-4">[4]</a></sup></li></ul></div></div></div>
+                                <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseScope">Future Scope</button></h2><div id="collapseScope" class="accordion-collapse collapse" data-bs-parent="#detailsAccordion"><div class="accordion-body"><ul><li>Ultra-high-field MRI (7T) for improved resolution.<sup class="citation" id="cite_ref-21"><a href="#ref-4">[4]</a>, <a href="#ref-5">[5]</a></sup></li><li>Multiband EPI for faster, sub-second temporal resolution.<sup class="citation" id="cite_ref-22"><a href="#ref-3">[3]</a></sup></li><li>Machine learning and AI for enhanced pattern recognition.<sup class="citation" id="cite_ref-23"><a href="#ref-4">[4]</a></sup></li><li>Real-time fMRI (rt-fMRI) for neurofeedback interventions.<sup class="citation" id="cite_ref-24"><a href="#ref-4">[4]</a>, <a href="#ref-8">[8]</a></sup></li></ul></div></div></div>
+                                <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLimits">Limitations</button></h2><div id="collapseLimits" class="accordion-collapse collapse" data-bs-parent="#detailsAccordion"><div class="accordion-body"><p>While powerful, fMRI has several limitations:</p><ul><li>The BOLD signal is an indirect measure of neuronal activity, dependent on hemodynamics.<sup class="citation" id="cite_ref-25"><a href="#ref-6">[6]</a></sup></li><li>Motion artifacts remain a challenge, especially in pediatric and patient populations.<sup class="citation" id="cite_ref-26"><a href="#ref-3">[3]</a></sup></li><li>While fMRI captures changes every 1-3 seconds, this is much slower compared to neural events that occur on a millisecond scale (like EEG or MEG). Therefore, fMRI can't capture rapid brain processes with the same precision.</li><li>fMRI machines are costly, and scanning is typically expensive and time-consuming. Data processing and analysis also require significant computational resources and expertise.</li><li>It’s harder to perform fMRI on people who can't stay still, like babies or patients with certain conditions, and it's not ideal for studying very fast or very slow brain activity.</li></ul></div></div></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-5 reveal-on-scroll">
+                            <h2 class="text-gradient fw-bolder mb-4 text-center">Clinical Case Studies</h2>
+                            <div class="accordion shadow-sm" id="caseStudiesAccordion">
+                                <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#caseCollapseOne">Visual Memory in Epilepsy</button></h2><div id="caseCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#caseStudiesAccordion"><div class="accordion-body"><p>This case study involved a 48-year-old right-handed woman diagnosed with epilepsy originating in the right temporal lobe. She underwent a right anterior-medial temporal lobe resection, including removal of the hippocampus. Functional MRI scans were taken both before and after surgery while she performed a visual-spatial memory task that required recognizing novel and familiar images such as animals, objects, and buildings. Before surgery, strong activation was observed in the right hippocampus during the recognition of new images. After surgery, that activation was significantly reduced; however, increased activity appeared in other cortical regions, indicating that the brain had reorganized itself to maintain function. Despite the loss of hippocampal tissue, the patient’s visual memory performance remained stable. This finding demonstrated the brain’s remarkable neuroplasticity and highlighted the usefulness of fMRI in assessing functional reorganization following neurosurgical intervention.<sup class="citation" id="cite_ref-27"><a href="#ref-10">[10]</a></sup></p><figure class="mt-3"><img src="assets/case1 .jpg" class="img-fluid rounded-3 d-block mx-auto" alt="fMRI scans for epilepsy"><figcaption>Pre- and post-surgical scans of the epilepsy patient.</figcaption></figure></div></div></div>
+                                <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#caseCollapseTwo">Pre-Surgical Brain Tumor Mapping</button></h2><div id="caseCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#caseStudiesAccordion"><div class="accordion-body"><p>A 53-year-old woman with a brain tumor near motor regions underwent fMRI to map hand and leg movement areas. Activation maps from motor tasks clearly identified critical cortical regions, enabling surgeons to plan a safer resection that successfully preserved motor function.<sup class="citation" id="cite_ref-28"><a href="#ref-11">[11]</a></sup></p><figure class="mt-3"><img src="assets/case2.jpg" class="img-fluid rounded-3 d-block mx-auto" alt="fMRI scan for tumor mapping"><figcaption>Motor cortex activation (red/yellow) near the tumor (outlined in green).</figcaption></figure></div></div></div>
+                                <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#caseCollapseThree">Brain Activation After Sport Concussion</button></h2><div id="caseCollapseThree" class="accordion-collapse collapse" data-bs-parent="#caseStudiesAccordion"><div class="accordion-body"><p>Two concussed athletes were studied. One showed widespread brain activation, suggesting compensatory recruitment of neural resources, while the other showed reduced activation despite reporting symptom recovery. This highlights fMRI's ability to reveal subtle neural changes that may not be apparent from clinical checklists alone.<sup class="citation" id="cite_ref-29"><a href="#ref-9">[9]</a></sup></p><figure class="mt-3"><img src="assets/case 3.jpg" class="img-fluid rounded-3 d-block mx-auto" alt="fMRI scans for concussion"><figcaption>Contrasting brain activation in two athletes post-concussion.</figcaption></figure></div></div></div>
+                            </div>
+                        </div>
+
+                        <div class="reveal-on-scroll">
+                            <h2 class="text-gradient fw-bolder mb-3">References</h2>
+                            <ol class="reference-list small">
+                                <li id="ref-1"><span class="back-link"><a href="#cite_ref-13">^</a></span> “Functional Magnetic Resonance Imaging (fMRI) of the Brain,” RadiologyInfo.org, 2025. [Online]. Available: https://www.radiologyinfo.org/en/info/fmribrain</li>
+                                <li id="ref-2"><span class="back-link"><a href="#cite_ref-6">^</a></span> H. M. Chow, Y. M. Kaup, M. Raichle, and C. Y. Wong, “Applications and limitations of functional magnetic resonance imaging,” Frontiers in Neuroscience, vol. 11, p. 524, 2017.</li>
+                                <li id="ref-3"><span class="back-link"><a href="#cite_ref-1">^</a></span> G. H. Glover, “Overview of functional magnetic resonance imaging,” Neurosurgery Clinics of North America, vol. 22, no. 2, pp. 133–139, 2011.</li>
+                                <li id="ref-4"><span class="back-link"><a href="#cite_ref-7">^</a></span> L. Loued-Khenissi, O. Döll, and K. Preuschoff, “An Overview of Functional Magnetic Resonance Imaging Techniques for Organizational Research,” Expert Review of Neurotherapeutics, vol. 24, no. 3, pp. 1–13, 2024.</li>
+                                <li id="ref-5"><span class="back-link"><a href="#cite_ref-5">^</a></span> N. F. Ramsey, “Functional MRI: A short introduction to methods, results, and applications,” European Psychiatry, vol. 17, no. 6, pp. 341–348, 2002.</li>
+                                <li id="ref-6"><span class="back-link"><a href="#cite_ref-2">^</a></span> J. C. Gore, “Principles and practice of functional MRI of the human brain,” Journal of Clinical Investigation, vol. 112, no. 1, pp. 4–9, 2003.</li>
+                                <li id="ref-7"><span class="back-link"><a href="#cite_ref-16">^</a></span> Society for Brain Mapping and Therapeutics, “Clinical Applications of fMRI,” World Brain Mapping Organization, 2025.</li>
+                                <li id="ref-8"><span class="back-link"><a href="#cite_ref-7">^</a></span> D. Orringer, D. R. Vago, and A. J. Golby, “Clinical applications and future directions of functional MRI,” Current Opinion in Neurology, vol. 25, no. 4, pp. 1–7, 2013.</li>
+                                <li id="ref-9"><span class="back-link"><a href="#cite_ref-19">^</a></span> M. Hutchison, R. Comper, and C. Mainwaring, “fMRI and brain activation after sport concussion: A tale of two cases,” Frontiers in Neurology, vol. 5, p. 88, 2014.</li>
+                                <li id="ref-10"><span class="back-link"><a href="#cite_ref-17">^</a></span> L. Korsnes, T. Cavanna, and E. Hugdahl, “An fMRI case study of visual memory in a patient with epilepsy: Comparison before and after temporal lobe surgery,” Epilepsy & Behavior, vol. 15, no. 3, pp. 345–350, 2009.</li>
+                                <li id="ref-11"><span class="back-link"><a href="#cite_ref-28">^</a></span> M. Cichocka, “Functional Magnetic Resonance Imaging of a Brain – Example Results of Examination,” Jagiellonian University Medical College, Kraków, Poland, 2011.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row justify-content-center">
+                <div class="col-auto"><div class="small m-0">Copyright &copy; Aiswarya Ramachandran 2025</div></div>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="modal fade" id="componentsModal" tabindex="-1" aria-labelledby="componentsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="componentsModalLabel">fMRI System Components</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="assets/Components.png" class="img-fluid" alt="Enlarged diagram of fMRI components">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top"><i class="bi bi-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+        const revealElements = document.querySelectorAll(".reveal-on-scroll");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(element => observer.observe(element));
+
+        const backToTopBtn = document.getElementById("backToTopBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
